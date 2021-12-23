@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository // 인터페이스 말고, 구현체에 직접 써야함을 주의하자!
+//@Repository // 인터페이스 말고, 구현체에 직접 써야함을 주의하자! (SpringConfig에서 설정할 예정)
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();

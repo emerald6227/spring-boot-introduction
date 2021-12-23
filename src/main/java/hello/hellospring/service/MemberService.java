@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+//@Service // SpringConfig에서 설정할 예정
 public class MemberService {
     private final MemberRepository memberRepository;
 
-    @Autowired // MemberRepository를 주입받아야함
+//    @Autowired // MemberRepository를 주입받아야함 (SpringConfig에서 설정할 예정)
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
