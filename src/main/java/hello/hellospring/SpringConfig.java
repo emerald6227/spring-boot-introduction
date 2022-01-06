@@ -1,6 +1,6 @@
 package hello.hellospring;
 
-import hello.hellospring.repository.JdbcMemberRepository;
+import hello.hellospring.repository.JdbcTemplateMemberRepository;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +27,6 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() { // 인터페이스가아닌 구현체로 해야함
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource); // 갈아끼움
+        return new JdbcTemplateMemberRepository(dataSource); // 갈아끼움
     }
 }
