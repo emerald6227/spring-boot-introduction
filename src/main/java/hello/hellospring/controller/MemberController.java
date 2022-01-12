@@ -19,6 +19,7 @@ public class MemberController {
     @Autowired // 스프링 컨테이너에 등록된 스프링빈(MemberService)과 연결시켜주기위해 사용
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass()); // Proxy 주입이 되는지 콘솔창에 출력해보기
     }
 
     @GetMapping("/members/new")
